@@ -1,0 +1,34 @@
+{
+  "name": "simexis/shipping-label",
+  "type": "library",
+  "description": "Generate and print shipping labels",
+  "keywords": [
+    "pdf",
+    "label",
+    "shipping"
+  ],
+  "homepage": "https://github.com/jooorooo/shipping-label",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Georgi Nachev",
+      "email": "jooorooo@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^5.6|^7",
+    "mpdf/mpdf": "dev-master",
+    "picqer/php-barcode-generator": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "ShippingLabel\\": "src"
+    }
+  },
+  "scripts": {
+    "check-style": "phpcs -p --standard=PSR2 src/",
+    "fix-style": "phpcbf -p --standard=PSR2 src/"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
