@@ -135,8 +135,11 @@ class ShippingLabel
         }
 
         $template_compiler = new TemplateCompiler();
-        $template_data = $template_compiler->compile($template->getTemplateHtml());
-
+        $template_data = $template_compiler->compile($template->getTemplateHtml(), [
+            'from' => $this->from,
+            'to' => $this->to
+        ]);
+        
         $this->mPdf->WriteHTML($template_data);
 
         return $this;
