@@ -233,7 +233,11 @@ class ShippingLabel
     {
         $this->setTemplate(new Template('a6', __DIR__ . '/templates/a6.html', [
             'page_size' => PageSize::A6,
-            'orientation' => 'L'
+            'orientation' => 'L',
+            'margin_left' => 5,
+            'margin_right' => 5,
+            'margin_top' => 5,
+            'margin_bottom' => 5,
         ]));
     }
 
